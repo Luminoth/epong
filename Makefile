@@ -5,11 +5,8 @@ PROGNAME = epong
 BINDIR = bin
 SRCDIR = src
 
-# architecture variables
-ARCH=`uname -m`
-
 # compiler options
-BASE_CFLAGS = -Wall -Wstrict-prototypes -Woverloaded-virtual -pipe -march=$(ARCH)
+BASE_CFLAGS = -Wall -Woverloaded-virtual -pipe
 #CFLAGS = $(BASE_CFLAGS) -DDEBUG -g -gstabs+ -fno-default-inline
 CFLAGS = $(BASE_CFLAGS) -DNDEBUG -O3 -finline-functions -fomit-frame-pointer -ffast-math -fno-common -funroll-loops -static
 LD_FLAGS = -lqt-mt
